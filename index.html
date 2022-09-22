@@ -5,12 +5,33 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react‑dom.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel‑standalone/6.21.1/babel.min.js"></script>
-    <link rel="stylesheet" href= "index.css">
+    <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-<div id= "root"></div>
+<div id="root"></div>
 <script type="text/babel">
     // ES6 / React / JSX code from here
+    //const element = <h1>Hello, world!</h1>;  //JSX: JS xml
+    function formatName(user){
+        return user.firstName + ' ' + user.lastName;
+    }
+
+    const user = {
+        firstName: 'Lei',
+        lastName: 'Shen'
+    };
+
+    const element =(
+        <h1>
+            Hello, {formatName(user)}!
+        </h1>
+    );
+
+
+    ReactDOM.render(element, document.getElementById('root')); //refer to line 11
+
+
+
 </script>
 </body>
 </html>
